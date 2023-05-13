@@ -1,0 +1,21 @@
+6366. Number of Senior Citizens
+
+
+class Solution {
+public:
+    int countSeniors(vector<string>& details) {
+        int n = details.size();
+        int count =0;
+        for(int i =0;i<n;i++){
+         string s = details[i];
+            int a = s[11]-48;
+            int b = s[12]-48;
+            a = a*10;
+            a+=b;
+            if(a>60){
+            count++;
+        }
+        }    
+        return count;
+    }
+};
